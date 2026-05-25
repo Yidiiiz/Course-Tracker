@@ -16,15 +16,19 @@ A Windows taskbar tray indicator that monitors UMD Testudo seat availability<br/
 
 <sub>Windows 10 & 11 &nbsp;·&nbsp; No installation required &nbsp;·&nbsp; No Python needed</sub>
 
+<br/>
+
+> ⚠️ **After launching, pin the tray icon to your taskbar — otherwise Windows hides it in the overflow menu and you won't see the indicator.**
+> - **Windows 11** — drag the dot icon out of the `∧` overflow onto your taskbar
+> - **Windows 10** — right-click taskbar → *Taskbar settings* → *Select which icons appear on the taskbar* → enable **UMD Course Tracker**
+
 </div>
 
 ---
 
 ## What it is
 
-UMD Course Tracker sits quietly in your taskbar as a small colored dot — green when seats are open, red when full. The moment a tracked section flips from closed to open, a Windows notification fires and clicking it takes you straight to the Testudo course page.
-
-It is designed to live on your taskbar as a persistent indicator, not just run in the background.
+UMD Course Tracker sits quietly in your taskbar as a small colored dot — green when seats are open, red when full. It is designed to be a persistent at-a-glance indicator that lives on your taskbar.
 
 ---
 
@@ -34,14 +38,7 @@ It is designed to live on your taskbar as a persistent indicator, not just run i
 
 Download `UMDCourseTracker.exe` above and double-click it. Nothing to install.
 
-**2 — Pin to your taskbar** *(important — do this first)*
-
-Windows hides new tray icons in the overflow menu by default. To keep the tracker visible as a taskbar indicator:
-
-- **Windows 11** — drag the dot icon out of the `∧` overflow area onto your taskbar
-- **Windows 10** — right-click the taskbar → *Taskbar settings* → *Select which icons appear on the taskbar* → turn on **UMD Course Tracker**
-
-**3 — Add your courses**
+**2 — Add your courses**
 
 Left-click the tray icon to open the panel → enter a course ID (e.g. `CMSC351`) → pick a semester → **+ Add Course**
 
