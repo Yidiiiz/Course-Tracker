@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0.."
 echo ============================================================
 echo  UMD Course Tracker - Setup
 echo ============================================================
@@ -26,6 +27,6 @@ echo.
 echo ============================================================
 echo  Setup complete!
 echo  Run:  python src\tracker.py   to start the tracker
-echo  Run:  build.bat              to create a standalone .exe
+echo  Run:  scripts\build.bat      to create a standalone .exe
 echo ============================================================
 pause
