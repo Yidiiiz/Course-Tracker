@@ -2,7 +2,7 @@
 
 # UMD Course Tracker
 
-A Windows taskbar tray indicator that monitors UMD Testudo seat availability<br/>and notifies you the moment a seat opens.
+A Windows taskbar tray indicator that monitors UMD Testudo seat availability<br/>and alerts you the moment a seat opens.
 
 <br/>
 
@@ -16,51 +16,46 @@ A Windows taskbar tray indicator that monitors UMD Testudo seat availability<br/
 
 <sub>Windows 10 & 11 &nbsp;·&nbsp; No installation required &nbsp;·&nbsp; No Python needed</sub>
 
-<br/>
+<br/><br/>
 
-> ⚠️ **After launching, pin the tray icon to your taskbar — otherwise Windows hides it in the overflow menu and you won't see the indicator.**
-> - **Windows 11** — drag the dot icon out of the `∧` overflow onto your taskbar
-> - **Windows 10** — right-click taskbar → *Taskbar settings* → *Select which icons appear on the taskbar* → enable **UMD Course Tracker**
+<img src="UMDCourseTracker/assets/pin-warning.svg" alt="Pin the tray icon to your taskbar"/>
 
 </div>
 
----
-
-## What it is
-
-UMD Course Tracker sits quietly in your taskbar as a small colored dot — green when seats are open, red when full. It is designed to be a persistent at-a-glance indicator that lives on your taskbar.
+<br/>
 
 ---
 
-## Getting Started
+**What it is**
 
-**1 — Download and run**
-
-Download `UMDCourseTracker.exe` above and double-click it. Nothing to install.
-
-> Windows may show a **"Windows protected your PC"** SmartScreen warning because the app is not code-signed (certificates cost ~$200/year). Click **More info** → **Run anyway** to proceed. The source code is fully open and visible in this repository.
-
-**2 — Add your courses**
-
-Left-click the tray icon to open the panel → enter a course ID (e.g. `CMSC351`) → pick a semester → **+ Add Course**
+UMD Course Tracker sits in your taskbar as a small colored dot — green when seats are open, red when full. It is designed to be a persistent at-a-glance indicator, not just a background process.
 
 ---
 
-## Usage
+**Download and run**
+
+Download `UMDCourseTracker.exe` above and double-click it.
+
+> Windows may show a **"Windows protected your PC"** SmartScreen prompt because the app is not code-signed (certificates cost ~$200/year). Click **More info → Run anyway**. The source code is fully open in this repository.
+
+---
+
+**Add a course**
+
+Left-click the tray icon → enter a course ID (e.g. `CMSC351`) → pick a semester → **+ Add Course**
 
 | Action | How |
 |:---|:---|
 | Open panel | Left-click the tray icon |
-| Add a course | Enter course ID + optional section, pick semester, click **+ Add Course** |
-| Remove a course | Hover a card → click the **×** |
+| Remove a course | Hover a card → click **×** |
 | Open on Testudo | Click anywhere on a course card |
-| Tray icon | 🟢 Seats open &nbsp; 🔴 Full &nbsp; 🟡 Checking / error |
+| Tray icon | 🟢 Seats open · 🔴 Full · 🟡 Checking |
 
 ---
 
-## Settings
+**Settings**
 
-Expand **Advanced** at the bottom of the panel:
+Expand **Advanced** at the bottom of the panel.
 
 | Setting | Default |
 |:---|:---|
@@ -69,11 +64,11 @@ Expand **Advanced** at the bottom of the panel:
 | Open on Windows startup | On |
 | Theme | Follows system dark / light mode |
 
-Your data (`courses.json`, `settings.json`) is stored in `%APPDATA%\UMD Course Tracker\` — never next to the `.exe`.
+Data is stored in `%APPDATA%\UMD Course Tracker\` — never next to the `.exe`.
 
 ---
 
-## Term Codes
+**Term Codes**
 
 The app selects the next upcoming semester automatically. You can override it when adding a course.
 
@@ -87,14 +82,14 @@ The app selects the next upcoming semester automatically. You can override it wh
 
 ---
 
-## Build from Source
+**Build from Source**
 
 ```bat
 git clone https://github.com/Yidiiiz/UMD-Course-Tracker.git
 cd "UMD-Course-Tracker\UMDCourseTracker"
-setup.bat              :: install dependencies
-build.bat              :: produces dist\UMDCourseTracker.exe
-python tracker.py      :: run from source
+setup.bat         :: install dependencies
+build.bat         :: produces dist\UMDCourseTracker.exe
+python tracker.py :: run from source
 ```
 
-**Dependencies:** `requests` · `beautifulsoup4` · `pystray` · `Pillow` · `plyer` · `pyinstaller`
+`requests` · `beautifulsoup4` · `pystray` · `Pillow` · `plyer` · `pyinstaller`
