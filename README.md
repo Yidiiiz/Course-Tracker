@@ -1,6 +1,6 @@
 <div align="center">
 
-![UMD Course Tracker](assets/banner.svg)
+![UMD Course Tracker](assets/image.png)
 
 <br/>
 
