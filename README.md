@@ -1,55 +1,71 @@
+<div align="center">
+
 # UMD Course Tracker
 
-A lightweight Windows tray app that watches UMD Testudo for open seats and fires a toast notification the moment one appears.
+**Never miss an open seat.** A lightweight Windows tray app that watches Testudo and fires an instant notification the moment a seat opens up.
 
-<p align="center">
-  <a href="https://github.com/Yidiiiz/UMDCourseTracker/releases/latest/download/UMDCourseTracker.exe">
-    <img src="https://img.shields.io/badge/Download-UMDCourseTracker.exe-brightgreen?style=for-the-badge&logo=windows" alt="Download"/>
-  </a>
-</p>
+<br/>
+
+[![Download](https://img.shields.io/github/v/release/Yidiiiz/UMD-Course-Tracker?label=Download%20Latest&style=for-the-badge&color=22c55e&logo=windows&logoColor=white)](https://github.com/Yidiiiz/UMD-Course-Tracker/releases/latest/download/UMDCourseTracker.exe)
+
+</div>
 
 ---
 
-## Installation
+## Getting Started
 
-1. Download **UMDCourseTracker.exe** above
-2. Run it — no installation needed
-3. A tray icon appears in the bottom-right corner of your taskbar
+### 1 — Download & Run
 
-Data files (`courses.json`, `settings.json`) are stored in `%APPDATA%\UMD Course Tracker\` and never written next to the exe.
+Download **UMDCourseTracker.exe** above and double-click it. No installation, no Python needed.
+
+### 2 — Pin it to your taskbar
+
+> ⚠️ **Do this first** — by default Windows hides tray icons in the overflow menu (the `^` arrow). To keep the tracker always visible:
+>
+> **Windows 11:** Drag the 🟡 icon out of the overflow tray onto your taskbar notification area.  
+> **Windows 10:** Right-click the taskbar → *Taskbar settings* → *Select which icons appear on the taskbar* → turn on **UMD Course Tracker**.
+
+### 3 — Add your courses
+
+Left-click the tray icon to open the panel. Enter a course ID (e.g. `CMSC351`), pick the semester, and click **+ Add Course**.
 
 ---
 
 ## Usage
 
-**Left-click** the tray icon to open the panel.
-
-- **Add a course** — enter the course ID (e.g. `CMSC351`), an optional section number, pick the semester, and click **+ Add Course**
-- **Remove a course** — hover a card and click the **×** that appears
-- **Open Testudo** — click anywhere on a course card to open the search page in your browser
-- **Tray icon colour** — 🟢 green = seats open · 🔴 red = all full · 🟡 yellow = checking / error
-
-### Advanced settings
-
-Expand the **Advanced** section at the bottom of the panel:
-
-| Setting | Default |
+| Action | How |
 |---|---|
-| Poll interval | 60 s (min 30 s) |
-| Notify when a section closes | Off |
-| Open on Windows startup | On |
-| Theme | System (follows Windows dark/light mode) |
+| Open panel | Left-click the tray icon |
+| Add a course | Enter course ID + optional section, pick semester, click **+ Add Course** |
+| Remove a course | Hover a card → click the **×** that appears |
+| Open on Testudo | Click anywhere on a course card |
+| Tray icon color | 🟢 Seats open · 🔴 Full · 🟡 Checking / error |
+
+---
+
+## Advanced Settings
+
+Expand **Advanced** at the bottom of the panel:
+
+| Setting | Default | Notes |
+|---|---|---|
+| Poll interval | 60 s | Minimum 30 s |
+| Notify when a section closes | Off | — |
+| Open on Windows startup | On | Adds registry entry |
+| Theme | System | Follows Windows dark/light mode |
 
 ---
 
 ## Requirements
 
 - Windows 10 or 11
-- A UMD student account is **not** required — Testudo's seat data is public
+- No UMD account needed — seat data is public
 
 ---
 
-## Term codes
+## Term Codes
+
+The app picks the most likely upcoming semester automatically. To override:
 
 | Code | Semester |
 |---|---|
@@ -59,17 +75,15 @@ Expand the **Advanced** section at the bottom of the panel:
 | `202601` | Spring 2026 |
 | `202608` | Fall 2026 |
 
-The app picks the most likely upcoming semester by default.
-
 ---
 
-## Building from source
+## Build from Source
 
 ```bat
-git clone https://github.com/Yidiiiz/UMDCourseTracker.git
-cd "UMDCourseTracker"
-setup.bat      # install dependencies
-build.bat      # produces dist\UMDCourseTracker.exe
+git clone https://github.com/Yidiiiz/UMD-Course-Tracker.git
+cd "UMD-Course-Tracker"
+setup.bat   # install dependencies
+build.bat   # produces dist\UMDCourseTracker.exe
 ```
 
-**Dependencies:** `requests`, `beautifulsoup4`, `pystray`, `Pillow`, `plyer`, `pyinstaller`
+**Dependencies:** `requests` · `beautifulsoup4` · `pystray` · `Pillow` · `plyer` · `pyinstaller`
