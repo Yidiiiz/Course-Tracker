@@ -16,8 +16,6 @@ A Windows taskbar tray indicator that monitors UMD Testudo seat availability<br/
 
 <sub>Windows 10 & 11 &nbsp;·&nbsp; No installation required &nbsp;·&nbsp; No Python needed</sub>
 
-<br/><br/>
-
 <img src="UMDCourseTracker/assets/pin-warning.svg" alt="Pin the tray icon to your taskbar"/>
 
 </div>
