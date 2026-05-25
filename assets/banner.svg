@@ -1,0 +1,49 @@
+<svg width="800" height="180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="180" fill="url(#bg)" rx="12"/>
+  <rect width="800" height="180" fill="none" stroke="#252525" stroke-width="1" rx="12"/>
+
+  <!-- Header bar (mimics app surface) -->
+  <rect x="1" y="1" width="798" height="52" fill="#1c1c1c" rx="11"/>
+  <rect x="1" y="40" width="798" height="12" fill="#1c1c1c"/>
+  <line x1="1" y1="52" x2="799" y2="52" stroke="#1f1f1f" stroke-width="1"/>
+
+  <!-- Header dot backing -->
+  <circle cx="30" cy="26" r="10" fill="#141414"/>
+  <!-- Header dot inner (green, blended like app) -->
+  <circle cx="30" cy="26" r="6" fill="#22c55e" opacity="0.55" filter="url(#glow)"/>
+
+  <!-- App title in header -->
+  <text x="50" y="31" font-family="Segoe UI, system-ui, -apple-system, sans-serif" font-weight="600" font-size="14" fill="#ececec" letter-spacing="0.1">UMD Course Tracker</text>
+
+  <!-- Fake minimize / close buttons -->
+  <text x="775" y="31" font-family="Segoe UI, sans-serif" font-size="16" fill="#3a3a3a">×</text>
+  <text x="755" y="29" font-family="Segoe UI Semibold, sans-serif" font-size="11" fill="#3a3a3a">—</text>
+
+  <!-- Course card 1 -->
+  <rect x="16" y="64" width="768" height="44" fill="#1c1c1c" rx="4"/>
+  <circle cx="40" cy="86" r="5" fill="#141414"/>
+  <circle cx="40" cy="86" r="3" fill="#22c55e" opacity="0.55"/>
+  <text x="55" y="82" font-family="Segoe UI, system-ui, sans-serif" font-weight="600" font-size="12" fill="#ececec">CMSC351</text>
+  <text x="55" y="97" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#4a4a4a">Fall 2026</text>
+  <text x="700" y="89" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#4ade80" opacity="0.75" text-anchor="end">3 seats open</text>
+
+  <!-- Course card 2 -->
+  <rect x="16" y="114" width="768" height="44" fill="#1c1c1c" rx="4"/>
+  <circle cx="40" cy="136" r="5" fill="#141414"/>
+  <circle cx="40" cy="136" r="3" fill="#ef4444" opacity="0.55"/>
+  <text x="55" y="132" font-family="Segoe UI, system-ui, sans-serif" font-weight="600" font-size="12" fill="#ececec">MATH241  <tspan font-weight="normal" font-size="10" fill="#4a4a4a">·  0201</tspan></text>
+  <text x="55" y="147" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#4a4a4a">Fall 2026</text>
+  <text x="700" y="139" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#686868" text-anchor="end">Full</text>
+</svg>
