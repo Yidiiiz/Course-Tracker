@@ -25,7 +25,7 @@ if errorlevel 1 (
 echo.
 echo ============================================================
 echo  Setup complete!
-echo  Run:  python tracker.py      to start the tracker
+echo  Run:  python src\tracker.py   to start the tracker
 echo  Run:  build.bat              to create a standalone .exe
 echo ============================================================
 pause
