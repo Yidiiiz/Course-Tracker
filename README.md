@@ -38,6 +38,8 @@ UMD Course Tracker sits quietly in your taskbar as a small colored dot — green
 
 Download `UMDCourseTracker.exe` above and double-click it. Nothing to install.
 
+> Windows may show a **"Windows protected your PC"** SmartScreen warning because the app is not code-signed (certificates cost ~$200/year). Click **More info** → **Run anyway** to proceed. The source code is fully open and visible in this repository.
+
 **2 — Add your courses**
 
 Left-click the tray icon to open the panel → enter a course ID (e.g. `CMSC351`) → pick a semester → **+ Add Course**
