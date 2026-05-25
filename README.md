@@ -93,9 +93,9 @@ The app selects the next upcoming semester automatically. You can override it wh
 ```bat
 git clone https://github.com/Yidiiiz/UMD-Course-Tracker.git
 cd UMD-Course-Tracker
-scripts\setup.bat      :: install dependencies
-scripts\build.bat      :: produces dist\UMDCourseTracker.exe
-python src\tracker.py  :: run from source
+setup.bat              :: install dependencies
+build.bat              :: produces dist\UMDCourseTracker.exe
+python tracker.py      :: run from source
 ```
 
 **Dependencies:** `requests` · `beautifulsoup4` · `pystray` · `Pillow` · `plyer` · `pyinstaller`

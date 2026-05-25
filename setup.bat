@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0.."
+cd /d "%~dp0"
 echo ============================================================
 echo  UMD Course Tracker - Setup
 echo ============================================================
@@ -26,7 +26,7 @@ if errorlevel 1 (
 echo.
 echo ============================================================
 echo  Setup complete!
-echo  Run:  python src\tracker.py   to start the tracker
-echo  Run:  scripts\build.bat      to create a standalone .exe
+echo  Run:  python tracker.py   to start the tracker
+echo  Run:  build.bat           to create a standalone .exe
 echo ============================================================
 pause

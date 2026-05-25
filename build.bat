@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0.."
+cd /d "%~dp0"
 echo ============================================================
 echo  UMD Course Tracker - Build
 echo ============================================================
@@ -27,7 +27,7 @@ if not exist icon.ico (
 
 echo.
 echo Building UMDCourseTracker.exe (this may take a minute)...
-python -m PyInstaller --onefile --windowed --icon=icon.ico --name=UMDCourseTracker src\tracker.py
+python -m PyInstaller --onefile --windowed --icon=icon.ico --name=UMDCourseTracker tracker.py
 
 if errorlevel 1 (
     echo.
