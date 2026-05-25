@@ -1,0 +1,14 @@
+<svg width="260" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 40">
+  <!-- Outer border: ACCENT #2e2e2e -->
+  <rect width="260" height="40" rx="2" fill="#2e2e2e"/>
+  <!-- Inner surface: SURFACE #1c1c1c, 1px inset -->
+  <rect x="1" y="1" width="258" height="38" rx="1" fill="#1c1c1c"/>
+  <!-- Status dot: backing -->
+  <circle cx="22" cy="20" r="7" fill="#141414"/>
+  <!-- Status dot: green inner -->
+  <circle cx="22" cy="20" r="4" fill="#1a5e33"/>
+  <!-- Label -->
+  <text x="38" y="25"
+    font-family="'Segoe UI','Segoe UI Semibold',system-ui,sans-serif"
+    font-size="12.5" fill="#c8c8c8" letter-spacing="0.1">Download for Windows</text>
+</svg>
